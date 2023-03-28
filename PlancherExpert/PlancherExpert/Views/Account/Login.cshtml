@@ -1,0 +1,20 @@
+﻿@model PlancherExpert.Models.Utilisateur;
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<div class="text-danger" asp-validation-summary="All"></div>
+
+<form asp-controller="Account" asp-action="Login" method="post">
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input type"email" asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input type="password" asp-for="Password" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Log In</button>
+</form>
