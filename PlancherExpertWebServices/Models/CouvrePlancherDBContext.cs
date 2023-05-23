@@ -9,6 +9,7 @@ namespace PlancherExpertWebServices.Models
         {
         }
         public DbSet<CouvrePlancher> CouvrePlancher { get; set; }
+        public DbSet<Commande> Commande { get; set; }
 
     }
 }

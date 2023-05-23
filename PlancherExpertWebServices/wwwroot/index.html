@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Couvre Planchers</title>
+</head>
+<body>
+    <h3>Ajouter un Couvre Plancher</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addCP()">
+        <label for="nom">PrixMa:</label>
+        <input type="text" id="PrixMa" required>
+        <label for="materiau">PrixMo:</label>
+        <input type="text" id="PrixMo" required>
+        <label for="materiau">Type:</label>
+        <input type="text" id="Type" required>
+        <button type="submit">Ajouter</button>
+    </form>
+    <div id="editForm">
+        <h3>Modification</h3>
+        <form action="javascript:void(0);" onsubmit="updateCP()">
+            <input type="hidden" id="edit-id">
+            <label for="edit-PrixMa">PrixMa:</label>
+            <input type="text" id="edit-PrixMa" required>
+            <label for="edit-PrixMo">PrixMo:</label>
+            <input type="text" id="edit-PrixMo" required>
+            <label for="edit-Type">Type:</label>
+            <input type="text" id="edit-Type" required>
+            <button type="submit">Enregistrer</button>
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>PrixMa</th>
+                <th>PrixMo</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="CouvrePlancherData"></tbody>
+    </table>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getCP();
+    </script>
+</body>
+</html>
